@@ -10,6 +10,13 @@
           "-webkit-text-size-adjust"
         ]
       }
-    ]
+    ],
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-aria": "off"
+      }
+    ],
+    "disown-opener": "off"
   }
 }
