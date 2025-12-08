@@ -14,20 +14,34 @@
       rel="stylesheet"
     />
 
-    <!-- Compiled CSS (local) -->
+    <!-- Link css -->
     <link href="./css/output.css" rel="stylesheet" />
 
     <!-- Custom CSS (brand variables + utilities) -->
-    <link href="./css/custom.css"
-    <link href="./css/design-improvements.css" rel="stylesheet" /> rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
 
-    <!-- Alpine.js (single include) -->
     <script
       src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
       defer
     ></script>
-
-    <!-- Font Awesome (single include) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-ksrM2b6YWz6QsMeYz1eSn+dDvlFA5mM4hH0Yb0U8Xx9o0w5MJyb+dPRZxw4ScntT3NcQyRSC6NlT+/ZBr+Co1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-ksrM2b6YWz6QsMeYz1eSn+dDvlFA5mM4hH0Yb0U8Xx9o0w5MJyb+dPRZxw4ScntT3NcQyRSC6NlT+/ZBr+Co1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -35,19 +49,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <!-- Small font-family helpers -->
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        font-family: "Playfair Display", serif;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <title>Découvre qui tu es</title>
   </head>
@@ -308,40 +317,33 @@
 
         <!-- Présentation Section -->
 
-        <section class="relative py-12 sm:py-24 rounded">
-          <div class="relative z-10 mx-auto max-w-4xl px-6 lg:px-8 text-center">
-            <h2
-              class="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg"
-            >
-              Découvre Qui Tu Es
-            </h2>
-            <p class="mt-6 text-lg leading-8 text-white/90 max-w-3xl mx-auto">
-              Bienvenue sur "Découvre Qui Tu Es", le site dédié à l'exploration
-              de votre personnalité et de vos passions. Plongez dans nos tests
-              interactifs et nos ressources personnalisées pour mieux vous
-              comprendre et révéler vos véritables aspirations.
-            </p>
-          </div>
-        </section>
         <section class="relative py-16 sm:py-28">
-          <div class="relative z-10 mx-auto max-w-5xl px-6 lg:px-8">
-            <div class="text-center mb-12">
+          <div
+            class="relative z-10 mx-auto max-w-5xl px-6 lg:px-8 text-center space-y-8"
+          >
+            <div class="space-y-4">
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70"
+              >
+                Exploration personnelle
+              </p>
               <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg"
+                class="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg"
               >
                 Découvre Qui Tu Es
               </h2>
               <p
-                class="text-lg sm:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed"
+                class="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed"
               >
-                Bienvenue sur "Découvre Qui Tu Es", votre compagnon personnel
-                pour explorer votre essence. À travers nos tests interactifs et
-                ressources spécialisées, découvrez votre véritable potentiel.
+                Votre compagnon pour explorer votre personnalité et vos
+                passions. Plongez dans nos tests interactifs et nos ressources
+                personnalisées pour mieux vous comprendre et révéler vos
+                véritables aspirations.
               </p>
             </div>
 
             <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="test.html"
                 class="inline-block px-8 py-3 bg-white text-[#2B6EF6] font-semibold rounded-lg hover:bg-gray-100 shadow-lg hover:shadow-xl transition transform hover:scale-105"
@@ -366,27 +368,7 @@
           aria-hidden="true"
         >
           <div
-            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2B6EF6] to-[#06B6D4] opacity-20"
-            style="
-              clip-path: polygon(
-                74.1% 44.1%,
-                100% 61.6%,
-                97.5% 26.9%,
-                85.5% 0.1%,
-                80.7% 2%,
-                72.5% 32.5%,
-                60.2% 62.4%,
-                52.4% 68.1%,
-                47.5% 58.3%,
-                45.2% 34.5%,
-                27.5% 76.7%,
-                0.1% 64.9%,
-                17.9% 100%,
-                27.6% 76.8%,
-                76.1% 97.7%,
-                74.1% 44.1%
-              );
-            "
+            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2B6EF6] to-[#06B6D4] opacity-20 hero-overlay-blob"
           ></div>
         </div>
         <div
@@ -394,27 +376,7 @@
           aria-hidden="true"
         >
           <div
-            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2B6EF6] to-[#06B6D4] opacity-20"
-            style="
-              clip-path: polygon(
-                74.1% 44.1%,
-                100% 61.6%,
-                97.5% 26.9%,
-                85.5% 0.1%,
-                80.7% 2%,
-                72.5% 32.5%,
-                60.2% 62.4%,
-                52.4% 68.1%,
-                47.5% 58.3%,
-                45.2% 34.5%,
-                27.5% 76.7%,
-                0.1% 64.9%,
-                17.9% 100%,
-                27.6% 76.8%,
-                76.1% 97.7%,
-                74.1% 44.1%
-              );
-            "
+            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2B6EF6] to-[#06B6D4] opacity-20 hero-overlay-blob"
           ></div>
         </div>
       </section>
@@ -579,4 +541,3 @@
     <!-- No extra scripts required; functionality handled by Alpine and local assets -->
   </body>
 </html>
-

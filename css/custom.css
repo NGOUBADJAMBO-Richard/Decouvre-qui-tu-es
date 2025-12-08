@@ -4,6 +4,15 @@
   --brand-cyan: #06b6d4;
   --brand-dark: #0f172a;
   --muted: #6b7280;
+  --light-bg: #f8fafc;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --border-light: #e2e8f0;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-primary);
 }
 
 /* Hero blob overlay style (consolidated from inline styles) */
@@ -26,4 +35,26 @@
     76.1% 97.7%,
     74.1% 44.1%
   );
+}
+
+/* Enhanced Section Styling */
+section {
+  scroll-margin-top: 80px;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  color: var(--brand-dark);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.75;
 }

@@ -1,23 +1,54 @@
 /* Enhanced Design System - CSS Improvements */
 
+/* Navbar Fixes */
+nav.bg-white {
+  background-color: white !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+nav a.text-gray-300 {
+  color: #4a5568 !important;
+  transition: all 200ms ease;
+}
+
+nav a.text-gray-300:hover {
+  color: #2b6ef6 !important;
+  background-color: #f7fafc !important;
+}
+
+/* Mobile Menu Enhancements */
+nav .sm\:hidden a {
+  color: #2d3748 !important;
+  background-color: transparent !important;
+}
+
+nav .sm\:hidden a:hover {
+  color: #2b6ef6 !important;
+  background-color: #edf2f7 !important;
+}
+
 /* Hero Section Enhancements */
 .hero-cta-button {
   display: inline-block;
-  padding: 0.75rem 2rem;
+  padding: 0.875rem 2rem;
   font-weight: 600;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-cta-button:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .hero-cta-button-primary {
   background-color: white;
   color: #2b6ef6;
+}
+
+.hero-cta-button-primary:hover {
+  background-color: #f0f4ff;
 }
 
 .hero-cta-button-secondary {
@@ -33,70 +64,152 @@
 .feature-card {
   padding: 1.5rem;
   background-color: white;
+  border: 1px solid #e2e8f0;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature-card:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
+  border-color: #06b6d4;
+  box-shadow: 0 12px 24px rgba(43, 110, 246, 0.15);
+  transform: translateY(-6px);
 }
 
 .feature-card-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: linear-gradient(135deg, #2b6ef6 0%, #06b6d4 100%);
   color: white;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature-card h3 {
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* Section Styling */
 .section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #111827;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
   text-align: center;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-title-gradient {
+  background: linear-gradient(135deg, #2b6ef6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-subtitle {
   font-size: 1.125rem;
-  color: #4b5563;
+  color: #4a5568;
   text-align: center;
   margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+/* Presentation Section */
+#presentation {
+  background-color: #ffffff;
+  padding: 3rem 0;
+}
+
+#presentation h2 {
+  color: #0f172a;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+#presentation p {
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
 /* Navbar Enhancements */
 nav.navbar-enhanced {
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 50;
 }
 
 nav.navbar-enhanced a {
-  color: #374151;
-  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #4a5568;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
 }
 
 nav.navbar-enhanced a:hover {
   color: #2b6ef6;
 }
 
-/* Footer Enhancements */
-footer.footer-enhanced {
-  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
-  color: #d1d5db;
+nav.navbar-enhanced a[aria-current="page"] {
+  background-color: #2b6ef6 !important;
+  color: white !important;
 }
 
-footer.footer-enhanced h3 {
+/* Footer Enhancements */
+footer {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: #cbd5e0;
+}
+
+footer h3 {
   color: white;
-  font-weight: bold;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  color: #a0aec0;
+  line-height: 1.7;
+}
+
+footer a {
+  color: #cbd5e0;
+  transition: color 200ms ease;
+}
+
+footer a:hover {
+  color: #2b6ef6;
+}
+
+footer .border-t {
+  border-color: #4a5568;
+}
+
+/* Button Enhancements */
+button.bg-indigo-600 {
+  background-color: #2b6ef6 !important;
+  transition: all 200ms ease;
+}
+
+button.bg-indigo-600:hover {
+  background-color: #1e40af !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(43, 110, 246, 0.3);
 }
 
 footer.footer-enhanced a {
