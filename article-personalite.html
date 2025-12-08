@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -9,357 +8,642 @@
     <link href="./img/Logo.jpg" rel="icon" />
     <link href="./img/Logo.jpg" rel="apple-touch-icon" />
 
-
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Playfair+Display:400,600,700,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Link css -->
-    <link href="./css/output.css" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet" />
 
-
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-ksrM2b6YWz6QsMeYz1eSn+dDvlFA5mM4hH0Yb0U8Xx9o0w5MJyb+dPRZxw4ScntT3NcQyRSC6NlT+/ZBr+Co1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-ksrM2b6YWz6QsMeYz1eSn+dDvlFA5mM4hH0Yb0U8Xx9o0w5MJyb+dPRZxw4ScntT3NcQyRSC6NlT+/ZBr+Co1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+      defer
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-ksrM2b6YWz6QsMeYz1eSn+dDvlFA5mM4hH0Yb0U8Xx9o0w5MJyb+dPRZxw4ScntT3NcQyRSC6NlT+/ZBr+Co1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-ksrM2b6YWz6QsMeYz1eSn+dDvlFA5mM4hH0Yb0U8Xx9o0w5MJyb+dPRZxw4ScntT3NcQyRSC6NlT+/ZBr+Co1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <title>Découvre qui tu es</title>
-</head>
+  </head>
 
-<body class="bg-gray-100 text-gray-900">
-
+  <body class="bg-gray-50 text-gray-900">
     <!-- Section header -->
     <header class="header">
-
-        <!-- Barre de menu -->
-        <nav class="bg-gray-800" x-data="{ open: false }">
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div class="relative flex h-16 items-center justify-between">
-                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <!-- Mobile menu button -->
-                        <button @click="open = !open" type="button"
-                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                            aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <!-- Icon when menu is closed. -->
-                            <svg x-show="!open" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                            <!-- Icon when menu is open. -->
-                            <svg x-show="open" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                        <!-- Logo et titre du site -->
-                        <div class="flex flex-shrink-0 items-center">
-                            <img class="h-16 w-30 flex -space-x-10 rounded" src="./img/Logo.jpg" alt="Your Company">
-                        </div>
-                        <div class="flex content-center items-center hidden sm:block sm:ml-6">
-                            <div class="flex space-x-4">
-                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="index.html"
-                                    class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                                    aria-current="page">Qui es-tu ?</a>
-                                <a href="propos.html"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Propos</a>
-                                <!-- Menu Dropdown -->
-                                <div class="relative inline-block text-left" x-data="{ dropdownOpen: false }">
-                                    <div>
-                                        <button @click="dropdownOpen = !dropdownOpen" type="button"
-                                            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white focus:outline-none">
-                                            Plus
-                                        </button>
-                                    </div>
-                                    <!-- Dropdown menu -->
-                                    <div x-show="dropdownOpen" @click.away="dropdownOpen = false"
-                                        x-transition:enter="transition ease-out duration-100"
-                                        x-transition:enter-start="transform opacity-0 scale-95"
-                                        x-transition:enter-end="transform opacity-100 scale-100"
-                                        x-transition:leave="transition ease-in duration-75"
-                                        x-transition:leave-start="transform opacity-100 scale-100"
-                                        x-transition:leave-end="transform opacity-0 scale-95"
-                                        class="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
-                                        <div class="py-1">
-                                            <a href="test.html"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Faire
-                                                des tests</a>
-                                            <a href="ressources.html"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Ressources</a>
-                                            <a href="langues.html"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Langues</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="experiences.html"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Experiences</a>
-                                <a href="contact.html"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
-
-                                <a href="inscription.html"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">S'inscrire</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <!-- Search bar -->
-
-                    </div>
-                </div>
+      <!-- Barre de menu -->
+      <nav class="bg-white shadow" x-data="{ open: false }">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button -->
+              <button
+                @click="open = !open"
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <!-- Icon when menu is closed. -->
+                <svg
+                  x-show="!open"
+                  class="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <!-- Icon when menu is open. -->
+                <svg
+                  x-show="open"
+                  class="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
             </div>
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            >
+              <!-- Logo et titre du site -->
+              <div class="flex flex-shrink-0 items-center">
+                <img
+                  class="h-16 w-30 flex -space-x-10 rounded"
+                  src="./img/Logo.jpg"
+                  alt="Your Company"
+                />
+              </div>
+              <div
+                class="hidden sm:flex sm:content-center sm:items-center sm:ml-6"
+              >
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a
+                    href="index.html"
+                    class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                    aria-current="page"
+                    >Qui es-tu ?</a
+                  >
+                  <a
+                    href="propos.html"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >Propos</a
+                  >
+                  <!-- Menu Dropdown -->
+                  <div
+                    class="relative inline-block text-left"
+                    x-data="{ dropdownOpen: false }"
+                  >
+                    <div>
+                      <button
+                        @click="dropdownOpen = !dropdownOpen"
+                        type="button"
+                        class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white focus:outline-none"
+                      >
+                        Plus
+                      </button>
+                    </div>
+                    <!-- Dropdown menu -->
+                    <div
+                      x-show="dropdownOpen"
+                      @click.away="dropdownOpen = false"
+                      x-transition:enter="transition ease-out duration-100"
+                      x-transition:enter-start="transform opacity-0 scale-95"
+                      x-transition:enter-end="transform opacity-100 scale-100"
+                      x-transition:leave="transition ease-in duration-75"
+                      x-transition:leave-start="transform opacity-100 scale-100"
+                      x-transition:leave-end="transform opacity-0 scale-95"
+                      class="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
+                    >
+                      <div class="py-1">
+                        <a
+                          href="test.html"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >Faire des tests</a
+                        >
+                        <a
+                          href="ressources.html"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >Ressources</a
+                        >
+                        <a
+                          href="langues.html"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >Langues</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <a
+                    href="experiences.html"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >Experiences</a
+                  >
+                  <a
+                    href="contact.html"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >Contact</a
+                  >
 
-            <!-- Mobile menu, show/hide based on menu state. -->
-            <div class="sm:hidden" x-show="open" x-transition:enter="transition ease-out duration-100"
+                  <a
+                    href="inscription.html"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >S'inscrire</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            >
+              <!-- Search bar -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div
+          class="sm:hidden"
+          x-show="open"
+          x-transition:enter="transition ease-out duration-100"
+          x-transition:enter-start="transform opacity-0 scale-95"
+          x-transition:enter-end="transform opacity-100 scale-100"
+          x-transition:leave="transition ease-in duration-75"
+          x-transition:leave-start="transform opacity-100 scale-100"
+          x-transition:leave-end="transform opacity-0 scale-95"
+          id="mobile-menu"
+        >
+          <div class="space-y-1 px-2 pt-2 pb-3">
+            <a
+              href="#"
+              class="rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+              aria-current="page"
+              >Qui es-tu ?</a
+            >
+            <a
+              href="propos.html"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >Propos</a
+            >
+            <div
+              class="relative inline-block text-left"
+              x-data="{ dropdownOpen: false }"
+            >
+              <div>
+                <button
+                  @click="dropdownOpen = !dropdownOpen"
+                  type="button"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white focus:outline-none"
+                >
+                  Plus
+                </button>
+              </div>
+              <!-- Dropdown menu -->
+              <div
+                x-show="dropdownOpen"
+                @click.away="dropdownOpen = false"
+                x-transition:enter="transition ease-out duration-100"
                 x-transition:enter-start="transform opacity-0 scale-95"
                 x-transition:enter-end="transform opacity-100 scale-100"
                 x-transition:leave="transition ease-in duration-75"
                 x-transition:leave-start="transform opacity-100 scale-100"
-                x-transition:leave-end="transform opacity-0 scale-95" id="mobile-menu">
-                <div class="space-y-1 px-2 pt-2 pb-3">
-                    <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-                        aria-current="page">Qui
-                        es-tu ?</a>
-                    <a href="propos.html"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Propos</a>
-                    <div class="relative inline-block text-left" x-data="{ dropdownOpen: false }">
-                        <div>
-                            <button @click="dropdownOpen = !dropdownOpen" type="button"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white focus:outline-none">
-                                Plus
-                            </button>
-                        </div>
-                        <!-- Dropdown menu -->
-                        <div x-show="dropdownOpen" @click.away="dropdownOpen = false"
-                            x-transition:enter="transition ease-out duration-100"
-                            x-transition:enter-start="transform opacity-0 scale-95"
-                            x-transition:enter-end="transform opacity-100 scale-100"
-                            x-transition:leave="transition ease-in duration-75"
-                            x-transition:leave-start="transform opacity-100 scale-100"
-                            x-transition:leave-end="transform opacity-0 scale-95"
-                            class="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
-                            <div class="py-1">
-                                <a href="test.html"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Faire des tests</a>
-                                <a href="ressources.html"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Ressources</a>
-                                <a href="langues.html"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Langues</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="experiences.html"
-                        class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Experiences</a>
-                    <a href="contact.html"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
-
-                    <a href="inscription.html"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">S'inscrire</a>
+                x-transition:leave-end="transform opacity-0 scale-95"
+                class="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
+              >
+                <div class="py-1">
+                  <a
+                    href="test.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >Faire des tests</a
+                  >
+                  <a
+                    href="ressources.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >Ressources</a
+                  >
+                  <a
+                    href="langues.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >Langues</a
+                  >
                 </div>
+              </div>
             </div>
-        </nav>
-        <!-- End Navbar -->
+            <a
+              href="experiences.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >Experiences</a
+            >
+            <a
+              href="contact.html"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >Contact</a
+            >
 
-        <!-- Header Section -->
-        <section class="relative overflow-hidden py-24 sm:py-32 bg-gradient-to-tr from-[#ff4694] to-[#776fff]">
-            <!-- <img src="./img/Header.jpg" alt="Background Image"
+            <a
+              href="inscription.html"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >S'inscrire</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Header Section -->
+      <section
+        class="relative overflow-hidden py-24 sm:py-32 bg-gradient-to-tr from-[#2B6EF6] to-[#06B6D4]"
+      >
+        <!-- <img src="./img/Header.jpg" alt="Background Image"
                 class="absolute inset-0 z-0 h-full w-full object-cover object-right md:object-center"> -->
 
-            <!-- Main Content Container -->
-            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center text-white">
-                <h2 class="text-4xl font-bold tracking-tight sm:text-6xl">Test de Personnalité</h2>
+        <!-- Main Content Container -->
+        <div
+          class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center text-white"
+        >
+          <h2 class="text-4xl font-bold tracking-tight sm:text-6xl">
+            Test de Personnalité
+          </h2>
+        </div>
 
-            </div>
+        <!-- Social Media Links -->
 
-            <!-- Social Media Links -->
-           
-
-            <!-- Gradient Overlays -->
-            <div class="absolute inset-0 z-0 sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
-                aria-hidden="true">
-                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-                </div>
-            </div>
-            <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
-                aria-hidden="true">
-                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-                </div>
-            </div>
-        </section>
+        <!-- Gradient Overlays -->
+        <div
+          class="absolute inset-0 z-0 sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+          aria-hidden="true"
+        >
+          <div
+            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2B6EF6] to-[#06B6D4] opacity-20"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+        <div
+          class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+          aria-hidden="true"
+        >
+          <div
+            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2B6EF6] to-[#06B6D4] opacity-20"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+      </section>
     </header>
     <!-- Header End -->
 
-     <!-- Articles et Blogs Section -->
-     <section class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <!-- Article Header -->
-            <div class="text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-violet-950 sm:text-4xl">Test de Personnalité : Découvrez Vous-Même</h2>
-                <p class="mt-4 text-lg leading-6 text-gray-600">Les tests de personnalité sont des outils précieux pour mieux se comprendre et améliorer sa vie personnelle et professionnelle.</p>
-            </div>
-            <!-- Article Content -->
-            <div class="mt-10">
-                <!-- Image -->
-                <div class="flex justify-center mb-8">
-                    <img src="./img/Test de Personnalité article.jpg" alt="Test de Personnalité" class="rounded-lg shadow-lg">
-                </div>
-                <!-- Introduction -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-                    <h3 class="text-2xl font-semibold mb-4">Introduction aux Tests de Personnalité</h3>
-                    <p class="text-gray-700 leading-7">Les tests de personnalité sont des questionnaires conçus pour révéler les traits de caractère, les préférences, les motivations et les aptitudes des individus. Utilisés depuis des décennies par les psychologues, ces tests permettent de mieux comprendre les comportements humains.</p>
-                </div>
-                <!-- Section 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-                    <h3 class="text-2xl font-semibold mb-4">Pourquoi Faire un Test de Personnalité ?</h3>
-                    <p class="text-gray-700 leading-7">Les raisons de faire un test de personnalité sont nombreuses :</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-700 leading-7">
-                        <li>Mieux se connaître et comprendre ses réactions.</li>
-                        <li>Améliorer ses relations personnelles et professionnelles.</li>
-                        <li>Découvrir ses forces et ses faiblesses.</li>
-                        <li>Choisir une carrière alignée avec ses compétences et intérêts.</li>
-                    </ul>
-                </div>
-                <!-- Image -->
-                <div class="flex justify-center mb-8">
-                    <img src="./img/Pourquoi Faire un Test.jpg" alt="Pourquoi Faire un Test" class="rounded-lg shadow-lg">
-                </div>
-                <!-- Section 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-                    <h3 class="text-2xl font-semibold mb-4">Les Différents Types de Tests de Personnalité</h3>
-                    <p class="text-gray-700 leading-7">Il existe plusieurs types de tests de personnalité, chacun ayant ses propres objectifs et méthodes :</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-700 leading-7">
-                        <li><strong>Le Myers-Briggs Type Indicator (MBTI) :</strong> Classe les individus en 16 types de personnalité basés sur leurs préférences.</li>
-                        <li><strong>Le Big Five :</strong> Évalue cinq traits principaux : ouverture, conscience, extraversion, amabilité et neuroticisme.</li>
-                        <li><strong>Le test DISC :</strong> Analyse les comportements en fonction de quatre axes : Dominance, Influence, Stabilité et Conformité.</li>
-                        <li><strong>Le test de personnalité de Holland :</strong> Utilisé principalement pour l'orientation professionnelle, il identifie six types de personnalité et les métiers correspondants.</li>
-                    </ul>
-                </div>
-                <!-- Image -->
-                <div class="flex justify-center mb-8">
-                    <img src="./img/Types de Tests de Personnalité.jpg" alt="Types de Tests de Personnalité" class="rounded-lg shadow-lg">
-                </div>
-                <!-- Section 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-                    <h3 class="text-2xl font-semibold mb-4">Comment Passer un Test de Personnalité ?</h3>
-                    <p class="text-gray-700 leading-7">Passer un test de personnalité est simple et accessible :</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-700 leading-7">
-                        <li><strong>Choisissez un test :</strong> Sélectionnez un test qui correspond à vos besoins (personnel, professionnel, développement personnel, etc.).</li>
-                        <li><strong>Répondez honnêtement :</strong> Soyez sincère dans vos réponses pour obtenir des résultats précis.</li>
-                        <li><strong>Analysez vos résultats :</strong> Lisez attentivement votre profil et les recommandations fournies.</li>
-                        <li><strong>Utilisez les résultats :</strong> Appliquez les insights obtenus pour améliorer vos relations, votre carrière et votre bien-être général.</li>
-                    </ul>
-                </div>
-                <!-- Conclusion -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-                    <h3 class="text-2xl font-semibold mb-4">Conclusion</h3>
-                    <p class="text-gray-700 leading-7">Les tests de personnalité sont des outils puissants pour mieux se connaître et s'épanouir dans tous les aspects de la vie. Que vous soyez à la recherche d'une meilleure compréhension de vous-même ou que vous cherchiez des conseils pour votre carrière, ces tests peuvent vous fournir des informations précieuses et vous guider vers une vie plus satisfaisante et alignée avec vos aspirations profondes.</p>
-                </div>
-                <!-- Image -->
-                <div class="flex justify-center">
-                    <img src="./img/Conclusion.jpg" alt="Conclusion" class="rounded-lg shadow-lg">
-                </div>
-            </div>
+    <!-- Articles et Blogs Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <!-- Article Header -->
+        <div class="text-center">
+          <h2
+            class="text-3xl font-bold tracking-tight text-violet-950 sm:text-4xl"
+          >
+            Test de Personnalité : Découvrez Vous-Même
+          </h2>
+          <p class="mt-4 text-lg leading-6 text-gray-600">
+            Les tests de personnalité sont des outils précieux pour mieux se
+            comprendre et améliorer sa vie personnelle et professionnelle.
+          </p>
         </div>
+        <!-- Article Content -->
+        <div class="mt-10">
+          <!-- Image -->
+          <div class="flex justify-center mb-8">
+            <img
+              src="./img/Test de Personnalité article.jpg"
+              alt="Test de Personnalité"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <!-- Introduction -->
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-semibold mb-4">
+              Introduction aux Tests de Personnalité
+            </h3>
+            <p class="text-gray-700 leading-7">
+              Les tests de personnalité sont des questionnaires conçus pour
+              révéler les traits de caractère, les préférences, les motivations
+              et les aptitudes des individus. Utilisés depuis des décennies par
+              les psychologues, ces tests permettent de mieux comprendre les
+              comportements humains.
+            </p>
+          </div>
+          <!-- Section 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-semibold mb-4">
+              Pourquoi Faire un Test de Personnalité ?
+            </h3>
+            <p class="text-gray-700 leading-7">
+              Les raisons de faire un test de personnalité sont nombreuses :
+            </p>
+            <ul class="list-disc list-inside mt-4 text-gray-700 leading-7">
+              <li>Mieux se connaître et comprendre ses réactions.</li>
+              <li>Améliorer ses relations personnelles et professionnelles.</li>
+              <li>Découvrir ses forces et ses faiblesses.</li>
+              <li>
+                Choisir une carrière alignée avec ses compétences et intérêts.
+              </li>
+            </ul>
+          </div>
+          <!-- Image -->
+          <div class="flex justify-center mb-8">
+            <img
+              src="./img/Pourquoi Faire un Test.jpg"
+              alt="Pourquoi Faire un Test"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <!-- Section 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-semibold mb-4">
+              Les Différents Types de Tests de Personnalité
+            </h3>
+            <p class="text-gray-700 leading-7">
+              Il existe plusieurs types de tests de personnalité, chacun ayant
+              ses propres objectifs et méthodes :
+            </p>
+            <ul class="list-disc list-inside mt-4 text-gray-700 leading-7">
+              <li>
+                <strong>Le Myers-Briggs Type Indicator (MBTI) :</strong> Classe
+                les individus en 16 types de personnalité basés sur leurs
+                préférences.
+              </li>
+              <li>
+                <strong>Le Big Five :</strong> Évalue cinq traits principaux :
+                ouverture, conscience, extraversion, amabilité et neuroticisme.
+              </li>
+              <li>
+                <strong>Le test DISC :</strong> Analyse les comportements en
+                fonction de quatre axes : Dominance, Influence, Stabilité et
+                Conformité.
+              </li>
+              <li>
+                <strong>Le test de personnalité de Holland :</strong> Utilisé
+                principalement pour l'orientation professionnelle, il identifie
+                six types de personnalité et les métiers correspondants.
+              </li>
+            </ul>
+          </div>
+          <!-- Image -->
+          <div class="flex justify-center mb-8">
+            <img
+              src="./img/Types de Tests de Personnalité.jpg"
+              alt="Types de Tests de Personnalité"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <!-- Section 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-semibold mb-4">
+              Comment Passer un Test de Personnalité ?
+            </h3>
+            <p class="text-gray-700 leading-7">
+              Passer un test de personnalité est simple et accessible :
+            </p>
+            <ul class="list-disc list-inside mt-4 text-gray-700 leading-7">
+              <li>
+                <strong>Choisissez un test :</strong> Sélectionnez un test qui
+                correspond à vos besoins (personnel, professionnel,
+                développement personnel, etc.).
+              </li>
+              <li>
+                <strong>Répondez honnêtement :</strong> Soyez sincère dans vos
+                réponses pour obtenir des résultats précis.
+              </li>
+              <li>
+                <strong>Analysez vos résultats :</strong> Lisez attentivement
+                votre profil et les recommandations fournies.
+              </li>
+              <li>
+                <strong>Utilisez les résultats :</strong> Appliquez les insights
+                obtenus pour améliorer vos relations, votre carrière et votre
+                bien-être général.
+              </li>
+            </ul>
+          </div>
+          <!-- Conclusion -->
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Conclusion</h3>
+            <p class="text-gray-700 leading-7">
+              Les tests de personnalité sont des outils puissants pour mieux se
+              connaître et s'épanouir dans tous les aspects de la vie. Que vous
+              soyez à la recherche d'une meilleure compréhension de vous-même ou
+              que vous cherchiez des conseils pour votre carrière, ces tests
+              peuvent vous fournir des informations précieuses et vous guider
+              vers une vie plus satisfaisante et alignée avec vos aspirations
+              profondes.
+            </p>
+          </div>
+          <!-- Image -->
+          <div class="flex justify-center">
+            <img
+              src="./img/Conclusion.jpg"
+              alt="Conclusion"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Article Section End-->
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-300 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- About Us -->
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-4">À propos</h3>
-                    <p>
-                        "Découvre Qui Tu Es" est dédié à l'exploration de votre personnalité et de vos passions. Plongez
-                        dans nos
-                        tests interactifs et nos ressources personnalisées pour mieux vous comprendre et révéler vos
-                        véritables
-                        aspirations.
-                    </p>
-                </div>
-                <!-- Navigation Links -->
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-4">Navigation</h3>
-                    <ul>
-                        <li class="mb-2"><a href="index.html" class="hover:underline">Accueil</a></li>
-                        <li class="mb-2"><a href="propos.html" class="hover:underline">À propos</a></li>
-                        <li class="mb-2"><a href="test.html" class="hover:underline">Faire des tests</a></li>
-                        <li class="mb-2"><a href="ressources.html" class="hover:underline">Ressources</a></li>
-                        <li class="mb-2"><a href="contact.html" class="hover:underline">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- Social Media Links -->
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-4">Suivez-nous</h3>
-                    <ul class="flex space-x-6">
-                        <li>
-                            <a href="https://www.facebook.com" class="text-gray-300 hover:text-white">
-                                <i class="fab fa-facebook-f fa-2x"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.twitter.com" class="text-gray-300 hover:text-white">
-                                <i class="fab fa-twitter fa-2x"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com" class="text-gray-300 hover:text-white">
-                                <i class="fab fa-instagram fa-2x"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com" class="text-gray-300 hover:text-white">
-                                <i class="fab fa-linkedin-in fa-2x"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Newsletter Subscription -->
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-4">Newsletter</h3>
-                    <p class="mb-4">
-                        Inscrivez-vous à notre newsletter pour recevoir les dernières nouvelles et mises à jour.
-                    </p>
-                    <form action="#" method="POST" class="flex">
-                        <input type="email" name="email" id="email" placeholder="Votre email" required
-                            class="w-full px-4 py-2 rounded-l-md border-none focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                        <button type="submit"
-                            class="px-4 py-2 bg-indigo-600 text-white rounded-r-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                            S'inscrire
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Découvre Qui Tu Es. Tous droits réservés.</p>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About Us -->
+          <div>
+            <h3 class="text-xl font-bold text-white mb-4">À propos</h3>
+            <p>
+              "Découvre Qui Tu Es" est dédié à l'exploration de votre
+              personnalité et de vos passions. Plongez dans nos tests
+              interactifs et nos ressources personnalisées pour mieux vous
+              comprendre et révéler vos véritables aspirations.
+            </p>
+          </div>
+          <!-- Navigation Links -->
+          <div>
+            <h3 class="text-xl font-bold text-white mb-4">Navigation</h3>
+            <ul>
+              <li class="mb-2">
+                <a href="index.html" class="hover:underline">Accueil</a>
+              </li>
+              <li class="mb-2">
+                <a href="propos.html" class="hover:underline">À propos</a>
+              </li>
+              <li class="mb-2">
+                <a href="test.html" class="hover:underline">Faire des tests</a>
+              </li>
+              <li class="mb-2">
+                <a href="ressources.html" class="hover:underline">Ressources</a>
+              </li>
+              <li class="mb-2">
+                <a href="contact.html" class="hover:underline">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Social Media Links -->
+          <div>
+            <h3 class="text-xl font-bold text-white mb-4">Suivez-nous</h3>
+            <ul class="flex space-x-6">
+              <li>
+                <a
+                  href="https://www.facebook.com"
+                  class="text-gray-300 hover:text-white"
+                >
+                  <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.twitter.com"
+                  class="text-gray-300 hover:text-white"
+                >
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com"
+                  class="text-gray-300 hover:text-white"
+                >
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com"
+                  class="text-gray-300 hover:text-white"
+                >
+                  <i class="fab fa-linkedin-in fa-2x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Newsletter Subscription -->
+          <div>
+            <h3 class="text-xl font-bold text-white mb-4">Newsletter</h3>
+            <p class="mb-4">
+              Inscrivez-vous à notre newsletter pour recevoir les dernières
+              nouvelles et mises à jour.
+            </p>
+            <form action="#" method="POST" class="flex">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Votre email"
+                required
+                class="w-full px-4 py-2 rounded-l-md border-none focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+              <button
+                type="submit"
+                class="px-4 py-2 bg-indigo-600 text-white rounded-r-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              >
+                S'inscrire
+              </button>
+            </form>
+          </div>
         </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2024 Découvre Qui Tu Es. Tous droits réservés.</p>
+        </div>
+      </div>
     </footer>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x/dist/alpine.min.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script
-        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-</body>
-
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  </body>
 </html>
