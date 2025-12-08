@@ -1,0 +1,50 @@
+      <!-- Barre de menu améliorée -->
+      <nav
+        class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100"
+        x-data="{ open: false }"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="flex flex-shrink-0 items-center">
+              <img class="h-10 w-auto" src="./logo/logo2.png" alt="Découvre qui tu es" />
+            </div>
+            <div class="hidden sm:flex sm:items-center sm:space-x-1">
+              <a href="index.html" class="rounded-lg px-4 py-2 text-sm font-medium text-white bg-[#2B6EF6] hover:bg-[#06B6D4] transition-colors duration-200">Qui es-tu ?</a>
+              <a href="propos.html" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#2B6EF6] transition-colors duration-200">Propos</a>
+              <div class="relative group">
+                <button class="rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors duration-200">Plus</button>
+                <div class="absolute left-0 mt-0 w-48 rounded-lg shadow-lg bg-white border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+                  <a href="test.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#2B6EF6]">Faire des tests</a>
+                  <a href="ressources.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#2B6EF6]">Ressources</a>
+                  <a href="langues.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#2B6EF6]">Langues</a>
+                </div>
+              </div>
+              <a href="experiences.html" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#2B6EF6] transition-colors duration-200">Experiences</a>
+              <a href="contact.html" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#2B6EF6] transition-colors duration-200">Contact</a>
+              <a href="inscription.html" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#2B6EF6] transition-colors duration-200">S'inscrire</a>
+            </div>
+            <div class="sm:hidden">
+              <button @click="open = !open" type="button" class="inline-flex items-center justify-center rounded-lg p-2 text-gray-600 hover:bg-gray-100 hover:text-[#2B6EF6] transition-colors duration-200" aria-controls="mobile-menu" :aria-expanded="open">
+                <span class="sr-only">Menu principal</span>
+                <svg x-show="!open" class="block h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                <svg x-show="open" class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div x-show="open" x-transition class="sm:hidden border-t border-gray-100 bg-white" id="mobile-menu">
+          <div class="space-y-1 px-4 pt-2 pb-3">
+            <a href="index.html" class="block rounded-lg px-4 py-2 text-base font-medium text-white bg-[#2B6EF6] hover:bg-[#06B6D4]">Qui es-tu ?</a>
+            <a href="propos.html" class="block rounded-lg px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#2B6EF6]">Propos</a>
+            <button @click="$el.nextElementSibling.classList.toggle('hidden')" class="w-full text-left block rounded-lg px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#2B6EF6]">Plus</button>
+            <div class="hidden pl-4 space-y-1">
+              <a href="test.html" class="block rounded-lg px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-[#2B6EF6]">Faire des tests</a>
+              <a href="ressources.html" class="block rounded-lg px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-[#2B6EF6]">Ressources</a>
+              <a href="langues.html" class="block rounded-lg px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-[#2B6EF6]">Langues</a>
+            </div>
+            <a href="experiences.html" class="block rounded-lg px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#2B6EF6]">Experiences</a>
+            <a href="contact.html" class="block rounded-lg px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#2B6EF6]">Contact</a>
+            <a href="inscription.html" class="block rounded-lg px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#2B6EF6]">S'inscrire</a>
+          </div>
+        </div>
+      </nav>
